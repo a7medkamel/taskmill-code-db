@@ -1,0 +1,27 @@
+{
+  "name": "taskmill-core-codedb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a7medkamel/taskmill-core-codedb.git"
+  },
+  "author": "a7medkamel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a7medkamel/taskmill-core-codedb/issues"
+  },
+  "homepage": "https://github.com/a7medkamel/taskmill-core-codedb#readme",
+  "dependencies": {
+    "bluebird": "^3.2.0",
+    "body-parser": "^1.14.2",
+    "config": "^1.19.0",
+    "express": "^4.13.4",
+    "nodegit": "^0.9.0",
+    "underscore": "^1.8.3"
+  }
+}
