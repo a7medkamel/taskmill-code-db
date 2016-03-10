@@ -1,4 +1,5 @@
 var config    = require('config')
+  , winston   = require('winston')
   , http      = require('./lib')
   ;
 
@@ -7,7 +8,9 @@ process.on('uncaughtException', function (err) {
 });
 
 function main() {
-  http.listen({ port : config.get('http.port') });
+  http.listen({ port : config.get('codedb.port') }, () => {
+    winston.info('taskmill-core-codedb [started] :%d', config.get('codedb.port'));
+  });
 }
 
 if (require.main === module) {
@@ -15,5 +18,5 @@ if (require.main === module) {
 }
 
 module.exports = {
-    main  : main
+  main  : main
 };
