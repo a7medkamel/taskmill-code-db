@@ -25,6 +25,8 @@
     "nedb": "^1.8.0",
     "nodegit": "^0.11.9",
     "underscore": "^1.8.3",
-    "winston": "^2.2.0"
+    "url-join": "0.0.1",
+    "winston": "^2.2.0",
+    "config-url": "git+https://github.com/a7medkamel/config-url.git"
   }
 }
