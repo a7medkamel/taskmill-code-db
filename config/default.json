@@ -1,6 +1,11 @@
 {
-  "codedb" : {
+  "codedb"  : {
     "port"  : "8585",
     "ttl"   : 86400
+  },
+  "cron"    : {
+    "scheduler" : {
+      "url"   : "http://cron.breadboard.io:8061"
+    }
   }
 }

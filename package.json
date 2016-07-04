@@ -17,16 +17,17 @@
   },
   "homepage": "https://github.com/a7medkamel/taskmill-core-codedb#readme",
   "dependencies": {
-    "bluebird": "^3.3.4",
-    "body-parser": "^1.15.0",
-    "config": "^1.19.0",
-    "express": "^4.13.4",
-    "github": "^0.2.4",
+    "bluebird": "^3.4.1",
+    "body-parser": "^1.15.1",
+    "config": "^1.21.0",
+    "config-url": "git+https://github.com/a7medkamel/config-url.git",
+    "express": "^4.14.0",
+    "github": "^1.1.2",
     "nedb": "^1.8.0",
-    "nodegit": "^0.11.9",
+    "nodegit": "^0.13.2",
+    "request-promise": "^3.0.0",
     "underscore": "^1.8.3",
-    "url-join": "0.0.1",
-    "winston": "^2.2.0",
-    "config-url": "git+https://github.com/a7medkamel/config-url.git"
+    "url-join": "1.1.0",
+    "winston": "^2.2.0"
   }
 }
