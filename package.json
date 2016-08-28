@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/a7medkamel/taskmill-core-codedb#readme",
   "dependencies": {
+    "ascoltatori": "^3.0.2",
     "bluebird": "^3.4.1",
     "body-parser": "^1.15.1",
     "config": "^1.21.0",
@@ -25,6 +26,7 @@
     "github": "^1.1.2",
     "nedb": "^1.8.0",
     "nodegit": "^0.13.2",
+    "redis": "^2.6.2",
     "request-promise": "^3.0.0",
     "underscore": "^1.8.3",
     "url-join": "1.1.0",
