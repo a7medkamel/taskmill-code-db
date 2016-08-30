@@ -1,7 +1,10 @@
 {
   "codedb"  : {
-    "port"  : "8585",
-    "ttl"   : 86400
+    "port"      : "8585",
+    "ttl"       : 86400,
+    "populate"  : {
+      "limit"   : 100
+    }
   },
   "cron"    : {
     "scheduler" : {
