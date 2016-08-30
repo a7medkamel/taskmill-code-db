@@ -6,9 +6,10 @@
       "limit"   : 100
     }
   },
-  "cron"    : {
-    "scheduler" : {
-      "url"   : "http://cron.breadboard.io:8061"
-    }
+  "pubsub" : {
+    "host"          : "[HOST]",
+    "port"          : 6379,
+    "password"      : "[PASSWORD]",
+    "db"            : 1
   }
 }

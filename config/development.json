@@ -1,7 +1,2 @@
 {
-  "cron"    : {
-    "scheduler" : {
-      "url"   : "http://localhost:8061"
-    }
-  }
 }
