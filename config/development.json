@@ -1,2 +1,6 @@
 {
+  "codedb"  : {
+    "winston"       : "debug",
+    "pull-on-start" : false
+  }
 }

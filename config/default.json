@@ -1,10 +1,12 @@
 {
   "codedb"  : {
-    "port"      : "8585",
-    "ttl"       : 86400,
-    "populate"  : {
-      "limit"   : 100
-    }
+    "winston"       : "info",
+    "port"          : "8585",
+    "ttl"           : 86400,
+    "populate"      : {
+      "limit"       : 100
+    },
+    "pull-on-start" : true
   },
   "pubsub" : {
     "host"          : "[HOST]",

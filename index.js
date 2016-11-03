@@ -7,6 +7,8 @@ process.on('uncaughtException', function (err) {
   console.error(err.stack || err.toString());
 });
 
+winston.level = config.get('codedb.winston');
+
 function main() {
   return http
           .listen({ port : config.getUrlObject('codedb').port })
