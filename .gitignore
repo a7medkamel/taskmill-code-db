@@ -35,4 +35,6 @@ node_modules
 # ignore db
 .db
 
+.tmp
+
 config/local.json

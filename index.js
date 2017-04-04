@@ -1,7 +1,10 @@
 var config    = require('config-url')
   , winston   = require('winston')
+  , Promise   = require('bluebird')
   , http      = require('./lib')
   ;
+
+Promise.longStackTraces();
 
 process.on('uncaughtException', function (err) {
   console.error(err.stack || err.toString());

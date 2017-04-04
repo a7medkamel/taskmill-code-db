@@ -23,17 +23,20 @@
     "body-parser": "^1.15.2",
     "config": "^1.24.0",
     "config-url": "git+https://github.com/a7medkamel/config-url.git",
+    "dockerode": "^2.4.3",
     "express": "^4.14.0",
     "fs-extra": "^1.0.0",
-    "git-download-archive": "^0.1.0",
+    "git-spawned-stream": "^0.1.1",
     "github": "^8.0.0",
     "lodash": "^4.17.4",
     "nedb": "^1.8.0",
     "nodegit": "^0.16.0",
     "redis": "^2.6.4",
     "request-promise": "^4.1.1",
+    "tar-fs": "^1.15.2",
     "taskmill-core-man": "git+https://github.com/a7medkamel/taskmill-core-man.git",
     "url-join": "1.1.0",
+    "uuid": "^3.0.1",
     "winston": "^2.3.0"
   }
 }
