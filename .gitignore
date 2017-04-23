@@ -36,5 +36,6 @@ node_modules
 .db
 
 .tmp
+.bld
 
 config/local.json

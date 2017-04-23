@@ -8,6 +8,9 @@
     },
     "pull-on-start" : true
   },
+  "account"             : {
+    "url"               : "http://account.breadboard.io"
+  },
   "pubsub" : {
     "host"          : "[HOST]",
     "port"          : 6379,

@@ -2,5 +2,6 @@
   "codedb"  : {
     "winston"       : "debug",
     "pull-on-start" : true
-  }
+  },
+  "account"         : "http://localhost:8050"
 }
