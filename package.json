@@ -30,6 +30,7 @@
     "git-spawned-stream": "^0.1.1",
     "github": "^9.2.0",
     "lodash": "^4.17.4",
+    "mime-types": "^2.1.15",
     "morgan": "^1.8.1",
     "nedb": "^1.8.0",
     "nodegit": "^0.18.1",
