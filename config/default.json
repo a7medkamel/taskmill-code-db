@@ -1,10 +1,34 @@
 {
+  "git" : {
+    "hosts" : [
+      {
+        "hostname" : "github.com",
+        "hook_secret" : "[SECRET]",
+        "options" : {
+          "debug": true,
+          "protocol": "https",
+          "host": "api.github.com",
+          "pathPrefix": null,
+          "headers": {
+            "user-agent": "[USER_AGENT]"
+          },
+          "timeout": 5000
+        }
+      }
+    ]
+  },
   "codedb"  : {
     "winston"       : "info",
     "port"          : "8585",
     "ttl"           : 86400,
     "populate"      : {
       "limit"       : 100
+    },
+    "redis" : {
+      "host"          : "[HOST]",
+      "port"          : 6379,
+      "password"      : "[PASSWORD]",
+      "db"            : 3
     },
     "pull-on-start" : true
   },
