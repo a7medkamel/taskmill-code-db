@@ -1,5 +1,6 @@
 {
   "git" : {
+    "hook_url" : "https://www.breadboard.io/githook",
     "hosts" : [
       {
         "hostname" : "github.com",

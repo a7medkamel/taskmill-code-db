@@ -1,9 +1,10 @@
-let fs      = require('fs')
-  , _       = require('lodash')
-  , redis   = require('redis')
-  , config  = require('config-url')
-  , Promise = require('bluebird')
-  , Repository = require('../../lib/git/repository')
+let fs            = require('fs')
+  , _             = require('lodash')
+  , redis         = require('redis')
+  , config        = require('config-url')
+  , Promise       = require('bluebird')
+  , account_sdk   = require('taskmill-core-account-sdk')
+  , Repository    = require('../../lib/git/repository')
   ;
 
 Promise.promisifyAll(redis.RedisClient.prototype);
@@ -48,9 +49,27 @@ redis_client
                   .all([
                     , i.repo.write_rec()
                     , i.repo.write_acl({ token : i.token })
+                    , Promise
+                        .try(() => {
+                          if (i.token) {
+                            return;
+                          }
+
+                          return account_sdk
+                                  .issueTokenByUsername('github.com', i.repo.username())
+                                  .then((bearer) => {
+                                    return account_sdk.findGitToken({ bearer : `bearer ${bearer}` });
+                                  })
+                                  .then((result) => {
+                                    i.repo.write_acl({ token : result.data.token })
+                                  })
+                                  .catch((err) => {
+                                    // console.error('trying token', i.repo.username(), err)
+                                  });
+                        })
                   ])
                   .then(() => {
-                    return i.repo.list_acl().then((rec) => console.log(rec));
+                    return i.repo.list_acl().then((rec) => console.log(rec, i.repo.remote()));
                   });
         })
         .catch((err) => {
