@@ -4,9 +4,11 @@
     "hosts" : [
       {
         "hostname" : "github.com",
-        "hook_secret" : "[SECRET]",
+        "hook": {
+          "secret" : "[SECRET]"
+        },
         "options" : {
-          "debug": true,
+          "debug": false,
           "protocol": "https",
           "host": "api.github.com",
           "pathPrefix": null,
