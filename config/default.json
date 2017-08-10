@@ -27,6 +27,9 @@
     "populate"      : {
       "limit"       : 100
     },
+    "hook" : {
+      "clean" : false
+    },
     "redis" : {
       "host"          : "[HOST]",
       "port"          : 6379,
