@@ -14,12 +14,19 @@ let fi = process.argv[2]
   , fo = process.argv[3]
   ;
 
-let redis_client = redis.createClient({
+let opts = {
     db              : config.get('codedb.redis.db')
   , host            : config.getUrlObject('codedb.redis').host
   , port            : config.getUrlObject('codedb.redis').port
-  , password        : config.get('codedb.redis.password')
-});
+};
+
+if (config.has('codedb.redis.password')) {
+  if (!_.isEmpty(config.get('codedb.redis.password'))) {
+    opts.password = config.get('codedb.redis.password');
+  }
+}
+
+let redis_client = redis.createClient(opts);
 
 redis_client
   .flushdbAsync()
