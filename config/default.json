@@ -28,7 +28,8 @@
       "limit"       : 100
     },
     "hook" : {
-      "clean" : false
+      "clean" : false,
+      "set" : true
     },
     "redis" : {
       "host"          : "[HOST]",
