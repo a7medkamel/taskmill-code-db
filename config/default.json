@@ -4,6 +4,7 @@
     "hosts" : [
       {
         "hostname" : "github.com",
+        "platform" : "github",
         "hook": {
           "secret" : "[SECRET]"
         },
