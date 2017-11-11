@@ -4,9 +4,11 @@ var config    = require('config-url')
   , http      = require('./lib')
   ;
 
-Promise.longStackTraces();
+Promise.config({
+  longStackTraces: true
+})
 
-process.on('uncaughtException', function (err) {
+process.on('uncaughtException', (err) => {
   winston.error(err);
 });
 
