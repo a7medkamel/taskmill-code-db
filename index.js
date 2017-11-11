@@ -7,7 +7,7 @@ var config    = require('config-url')
 Promise.longStackTraces();
 
 process.on('uncaughtException', function (err) {
-  console.error(err.stack || err.toString());
+  winston.error(err);
 });
 
 winston.level = config.get('codedb.winston');
