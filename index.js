@@ -9,11 +9,11 @@ Promise.config({
 })
 
 process.on('uncaughtException', (err) => {
-  winston.error('unhandled:exception', err);
+  console.error('unhandled:exception', err);
 });
 
 process.on('unhandledRejection', (reason, p) => {
-  winston.error('unhandled:rejection', err, p);
+  coneols.error('unhandled:rejection', err, p);
 });
 
 winston.level = config.get('codedb.winston');
