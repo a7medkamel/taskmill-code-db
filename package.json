@@ -48,6 +48,7 @@
     "taskmill-core-account-sdk": "git+https://github.com/a7medkamel/taskmill-core-account-sdk.git",
     "taskmill-core-git": "git+https://github.com/a7medkamel/taskmill-core-git.git",
     "taskmill-core-man": "git+https://github.com/a7medkamel/taskmill-core-man.git",
+    "tailf.io-sdk": "git+https://github.com/a7medkamel/tailf.io-sdk.git",
     "through2": "^2.0.3",
     "url-join": "2.0.2",
     "uuid": "^3.1.0",
