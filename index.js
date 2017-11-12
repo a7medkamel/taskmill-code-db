@@ -19,6 +19,9 @@ function main() {
           .listen({ port : config.getUrlObject('codedb').port })
           .then(() => {
             winston.info('taskmill-core-codedb [started] :%d', config.getUrlObject('codedb').port);
+          })
+          .catch((err) => {
+            winston.error('boot failed', err);
           });
 }
 
