@@ -38,7 +38,8 @@
       "password"      : "[PASSWORD]",
       "db"            : 3
     },
-    "pull-on-start" : true
+    "file_size_limit" : 10000,
+    "pull-on-start"   : true
   },
   "account"             : {
     "url"               : "http://account.breadboard.io"
