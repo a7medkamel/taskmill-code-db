@@ -13,7 +13,7 @@ process.on('uncaughtException', (err) => {
 });
 
 process.on('unhandledRejection', (reason, p) => {
-  console.error('unhandled:rejection', err, p);
+  console.error('unhandled:rejection', reason, p);
 });
 
 winston.level = config.get('codedb.winston');
