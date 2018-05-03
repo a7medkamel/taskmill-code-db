@@ -21,6 +21,14 @@
       }
     ]
   },
+  "build"  : {
+    "redis" : {
+      "host"          : "[HOST]",
+      "port"          : 6379,
+      "password"      : "[PASSWORD]",
+      "db"            : 4
+    }
+  },
   "codedb"  : {
     "winston"       : "info",
     "port"          : "8585",
