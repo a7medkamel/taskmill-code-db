@@ -21,7 +21,7 @@
       }
     ]
   },
-  "build"  : {
+  "make"  : {
     "redis" : {
       "host"          : "[HOST]",
       "port"          : 6379,
@@ -32,7 +32,6 @@
   "codedb"  : {
     "winston"       : "info",
     "port"          : "8585",
-    "ttl"           : 86400,
     "populate"      : {
       "limit"       : 100
     },

@@ -1,7 +1,21 @@
 {
+  "make"  : {
+    "redis" : {
+      "host"          : "localhost",
+      "port"          : 6379,
+      "password"      : null,
+      "db"            : 4
+    }
+  },
   "codedb"  : {
     "winston"       : "debug",
-    "pull-on-start" : true
+    "pull-on-start" : true,
+    "redis" : {
+      "host"          : "localhost",
+      "port"          : 6379,
+      "password"      : null,
+      "db"            : 3
+    }
   },
   "account"         : "http://localhost:8050"
 }
