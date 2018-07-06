@@ -9,14 +9,8 @@
           "secret" : "[SECRET]"
         },
         "options" : {
-          "debug": false,
-          "protocol": "https",
-          "host": "api.github.com",
-          "pathPrefix": null,
-          "headers": {
-            "user-agent": "[USER_AGENT]"
-          },
-          "timeout": 5000
+          "baseUrl": "https://api.github.com",
+          "headers": { }
         }
       }
     ]

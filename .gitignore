@@ -39,3 +39,6 @@ node_modules
 .bld
 
 config/local.json
+config/local.js
+
+key
