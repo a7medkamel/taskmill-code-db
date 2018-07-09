@@ -78,6 +78,6 @@ RUN npm i
 
 from docker.breadboard.io/sandbox-lang-nodejs as sandbox
 
-WORKDIR /src
+# WORKDIR /src
 
-COPY --from=npm /src .
+COPY --from=npm /src /src
