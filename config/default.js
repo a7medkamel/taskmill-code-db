@@ -6,6 +6,6 @@ module.exports = {
   "codedb" : {
     "file_size_limit"   : bytes('10kb'),
     "git_archive_limit" : bytes('5mb'),
-    "ttl"               : ms('1h') / 1000
+    "ttl"               : ms('10m')
   }
 };
