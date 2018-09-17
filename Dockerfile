@@ -17,14 +17,6 @@ RUN apk --no-cache add git
 #     rm -rf /tmp/* /var/cache/apk/* && \
 #     npm cache clean --force
 
-# RUN echo "http://dl-1.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
-#     echo "http://dl-2.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
-#     echo "http://dl-3.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
-#     echo "http://dl-4.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
-#     echo "http://dl-5.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
-#
-# RUN apk upgrade
-
 RUN apk --no-cache add --virtual .build-deps zeromq-dev g++ libressl-dev make python curl-dev \
     && env BUILD_ONLY=true yarn install \
     && apk del .build-deps \
@@ -36,8 +28,6 @@ RUN apk --no-cache add --virtual .build-deps zeromq-dev g++ libressl-dev make py
     # && mv /tmp/npm-nodegit-* $(yarn cache dir)/ \
     # && find $(yarn global dir)/node_modules/nodegit -regex '.*/\(include\|src\|vendor\)$' -maxdepth 1 -exec rm -rf {} \; \
     # && rm -rf $(yarn global dir)/node_modules/nodegit/build/Release/.deps
-
-# RUN BUILD_ONLY=true npm install
 
 EXPOSE 8585
 CMD [ "node", "index.js" ]
