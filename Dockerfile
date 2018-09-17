@@ -17,8 +17,13 @@ RUN apk --no-cache add git
 #     rm -rf /tmp/* /var/cache/apk/* && \
 #     npm cache clean --force
 
-RUN apk upgrade \
-    && apk --no-cache add --virtual .build-deps zeromq-dev g++ libressl-dev make python curl-dev \
+RUN echo "http://dl-1.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
+    echo "http://dl-2.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
+    echo "http://dl-3.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
+    echo "http://dl-4.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
+    echo "http://dl-5.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
+
+RUN apk --no-cache add --virtual .build-deps zeromq-dev g++ libressl-dev make python curl-dev \
     && env BUILD_ONLY=true yarn install \
     && apk del .build-deps \
     && apk --no-cache add libcurl libressl2.5-libtls
