@@ -17,7 +17,7 @@ RUN apk --no-cache add git
 #     rm -rf /tmp/* /var/cache/apk/* && \
 #     npm cache clean --force
 
-RUN apk upgrade
+RUN apk upgrade \
     && apk --no-cache add --virtual .build-deps zeromq-dev g++ libressl-dev make python curl-dev \
     && env BUILD_ONLY=true yarn install \
     && apk del .build-deps \
