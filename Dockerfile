@@ -23,6 +23,8 @@ RUN echo "http://dl-1.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
     echo "http://dl-4.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories; \
     echo "http://dl-5.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
 
+RUN apk upgrade
+
 RUN apk --no-cache add --virtual .build-deps zeromq-dev g++ libressl-dev make python curl-dev \
     && env BUILD_ONLY=true yarn install \
     && apk del .build-deps \
