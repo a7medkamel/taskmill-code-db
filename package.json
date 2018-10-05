@@ -48,7 +48,7 @@
     "taskmill-core-account-sdk": "git+https://github.com/a7medkamel/taskmill-core-account-sdk.git",
     "taskmill-core-git": "git+https://github.com/a7medkamel/taskmill-core-git.git",
     "taskmill-core-man": "git+https://github.com/a7medkamel/taskmill-core-man.git",
-    "through2": "^2.0.3",
+    "through2-map": "^3.0.0",
     "url-join": "4.0.0",
     "uuid": "^3.3.2",
     "verror": "^1.10.0",

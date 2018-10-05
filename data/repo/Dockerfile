@@ -14,7 +14,7 @@ RUN apt-get update                                                          && \
     apt-get install -y gnupg-agent
 
 # Load code into the /src folder
-COPY ./ /src
+COPY ./ /repo.git
 
 # Contains the GPG key's id `user@domain.com`
 ARG GPG_UID=EMPTY
@@ -33,7 +33,8 @@ ENV GIT_SHA ${GIT_SHA}
 
 WORKDIR /src
 
-RUN git checkout $GIT_SHA
+RUN git clone /repo.git ./    && \
+    git checkout "$GIT_SHA"
 
 # 1. import the key into the gpg keyring
 RUN if [ -d ".git-crypt" ]; then                                               \
