@@ -77,7 +77,7 @@ COPY --from=decrypt /src .
 
 RUN npm i
 
-from gcr.io/breadboard-io/sandbox-nodejs:4a9438b920780f43f8fd55f0b183016e6fffa09e as sandbox
+from gcr.io/breadboard-xyz/github-breadboard-xyz-sandbox-nodejs:8170e412dc7000a6577029062f91dd20428380e7 as sandbox
 
 # WORKDIR /src
 
