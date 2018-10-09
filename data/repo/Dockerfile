@@ -34,7 +34,7 @@ ENV GIT_SHA ${GIT_SHA}
 WORKDIR /src
 
 RUN git clone /repo.git ./    && \
-    git checkout "$GIT_SHA"
+    git checkout "$GIT_SHA" && ls ./
 
 # 1. import the key into the gpg keyring
 RUN if [ -d ".git-crypt" ]; then                                               \
@@ -77,7 +77,7 @@ COPY --from=decrypt /src .
 
 RUN npm i
 
-from docker.breadboard.io/sandbox-lang-nodejs as sandbox
+from gcr.io/breadboard-io/sandbox-nodejs:4a9438b920780f43f8fd55f0b183016e6fffa09e as sandbox
 
 # WORKDIR /src
 

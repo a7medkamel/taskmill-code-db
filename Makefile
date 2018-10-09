@@ -1,8 +1,3 @@
-sandbox_land_nodejs:
-	cd ./data/sandbox																																		&& \
-	docker build -f Dockerfile --no-cache -t docker.breadboard.io/sandbox-lang-nodejs . && \
-	docker push docker.breadboard.io/sandbox-lang-nodejs
-
 repository:
 	docker build 																							  \
 		-f $(dockerfile)                                          \
