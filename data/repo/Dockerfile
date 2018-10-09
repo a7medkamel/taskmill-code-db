@@ -33,8 +33,12 @@ ENV GIT_SHA ${GIT_SHA}
 
 WORKDIR /src
 
-RUN git clone /repo.git ./    && \
+RUN git clone /repo.git ./                                                  && \
+    REMOTE="$(git --git-dir /repo.git config remote.origin.url)"            && \
+    git remote set-url origin $REMOTE                                       && \
     git checkout "$GIT_SHA" && ls ./
+
+    # REMOTE="$(git --git-dir /repo.git remote get-url origin)"               && \
 
 # 1. import the key into the gpg keyring
 RUN if [ -d ".git-crypt" ]; then                                               \
@@ -77,7 +81,7 @@ COPY --from=decrypt /src .
 
 RUN npm i
 
-from gcr.io/breadboard-xyz/github-breadboard-xyz-sandbox-nodejs:8170e412dc7000a6577029062f91dd20428380e7 as sandbox
+from gcr.io/breadboard-io/sandbox-nodejs:9c863c956c6d1a5dbd326372c8499ed8cdad490a as sandbox
 
 # WORKDIR /src
 
