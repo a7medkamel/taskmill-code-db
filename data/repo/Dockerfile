@@ -42,6 +42,8 @@ RUN git clone /repo.git ./                                                  && \
 
 # 1. import the key into the gpg keyring
 RUN if [ -d ".git-crypt" ]; then                                               \
+    GPG_PASSPHRASE=`echo "$GPG_PASSPHRASE" | base64 --decode`               && \
+    GPG_KEY=`echo "$GPG_KEY" | base64 --decode`                             && \
     echo "${GPG_KEY}" | gpg --passphrase "${GPG_PASSPHRASE}" --import       && \
 # 2. configure gpg to use the gpg-agent
     sed -i 's/# use-agent/use-agent/' ~/.gnupg/gpg.conf                     && \
