@@ -29,5 +29,7 @@ RUN apk --no-cache add --virtual .build-deps zeromq-dev g++ libressl-dev make py
     # && find $(yarn global dir)/node_modules/nodegit -regex '.*/\(include\|src\|vendor\)$' -maxdepth 1 -exec rm -rf {} \; \
     # && rm -rf $(yarn global dir)/node_modules/nodegit/build/Release/.deps
 
+VOLUME /src/node_modules
+
 EXPOSE 8585
 CMD [ "node", "index.js" ]
